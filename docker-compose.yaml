@@ -1,0 +1,22 @@
+services:
+  # GitLab server
+  gitlab:
+    image: gitlab/gitlab-ce:latest
+    restart: always
+    container_name: gitlab
+    hostname: gitlab.kamath.work
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'https://gitlab.kamath.work'
+        gitlab_rails['initial_root_password'] = '$GITLAB_ROOT_PASSWORD'
+        letsencrypt['enable'] = false
+    ports:
+      - '80:80'
+      - '443:443'
+      - '2222:22'
+    volumes:
+      - '$GITLAB_HOME/ssl:/etc/gitlab/ssl'
+      - '$GITLAB_HOME/config:/etc/gitlab'
+      - '$GITLAB_HOME/logs:/var/log/gitlab'
+      - '$GITLAB_HOME/data:/var/opt/gitlab'
+    shm_size: '256m'
