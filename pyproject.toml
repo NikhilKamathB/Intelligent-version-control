@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "ivc"
+version = "0.1.0"
+description = "Intelligent Version Control System"
+authors = ["Nikhil Bola Kamath <nikhilkb98@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+textual = "^0.76.0"
+textual-dev = "^1.5.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
