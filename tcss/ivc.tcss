@@ -1,0 +1,33 @@
+IVCApp {
+    color: rgba(0, 255, 0, 50);
+}
+
+Chatbot {
+
+    border: heavy;
+    border_title_align: left;
+
+    Static {
+        height: 3fr;
+        border: solid green;
+    }
+
+    QueryInput {
+
+        height: 1fr;
+
+        TextArea {
+            width: 0.85fr;
+        }
+
+        Vertical {
+            width: 0.15fr;
+            align: center bottom;
+
+            Button {
+                width: 100%;
+            }
+        }
+
+    }
+}
