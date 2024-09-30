@@ -1,5 +1,5 @@
 IVCApp {
-    color: rgba(0, 255, 0, 50);
+    color: ansi_bright_green;
 }
 
 Chatbot {
@@ -7,9 +7,33 @@ Chatbot {
     border: heavy;
     border_title_align: left;
 
-    Static {
+    VerticalScroll {
         height: 3fr;
-        border: solid green;
+        align: center middle;
+        border: solid ansi_bright_green;
+
+        Container {
+            height: auto;
+            width: 100%;
+        }
+
+        Static {
+            width: auto;
+            max-width: 75%;
+            text-align: left;
+            padding: 1 3;
+            border: solid ansi_bright_green;
+        }
+
+        .chatbot_user_msg_container {
+            align-horizontal: right;
+        }
+
+        .chatbot_ai_msg_container {
+            align-horizontal: left;
+        }
+
+
     }
 
     QueryInput {
@@ -18,6 +42,7 @@ Chatbot {
 
         TextArea {
             width: 0.85fr;
+            border: solid ansi_bright_green;
         }
 
         Vertical {
@@ -26,6 +51,7 @@ Chatbot {
 
             Button {
                 width: 100%;
+                color: ansi_bright_green;
             }
         }
 
